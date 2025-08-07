@@ -8,8 +8,8 @@ WORKDIR /app
 COPY . .
 
 # Compile and run (adjust if using Maven or Gradle)
-RUN javac src/Main.java
-
+#RUN javac src/Main.java
+RUN javac $(find src -name "*.java")
 # Run the application
-CMD ["java", "src/Main"]
-
+#CMD ["java", "src/Main"]
+CMD ["java", "hotel.management.Main"]
